@@ -25,14 +25,16 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lti-Sd-Ehz">
                                 <rect key="frame" x="90" y="618.66666666666663" width="213" height="34.333333333333371"/>
-                                <color key="backgroundColor" systemColor="systemPinkColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="213" id="9Rn-kh-oia"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Show greeting">
+                                <buttonConfiguration key="configuration" style="filled" title="Show greeting">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" systemColor="systemPinkColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="greetingButtonDidTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="dhK-P0-0Qw"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -45,6 +47,10 @@
                             <constraint firstItem="Lti-Sd-Ehz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h4o-zr-Db9"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greetingButton" destination="Lti-Sd-Ehz" id="5Ub-eX-UYl"/>
+                        <outlet property="greetingLabel" destination="CAw-nn-k3d" id="w3I-UV-73T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
